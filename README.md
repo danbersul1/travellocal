@@ -9,7 +9,4 @@ Technologies:
 
 
 Group Members:
-Sampey Hoffman
-Desiree McLenden
-Daniel Sullivan
-Mohammed Mustafa
+Sampey Hoffman - Desiree McLenden - Daniel Sullivan - Mohammed Mustafa
