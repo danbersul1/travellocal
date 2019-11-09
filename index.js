@@ -210,8 +210,7 @@ $(document).ready(function () {
 })
 
 
-<<<<<<< HEAD
-=======
+
 
 $(document).ready(function(){
 
@@ -300,4 +299,3 @@ console.log(refernce);
 
 }) 
 
->>>>>>> master
