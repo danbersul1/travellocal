@@ -4,14 +4,13 @@ $(document).ready(function(){
 
 var placeData=[];
 
-function renderAtt(arr){
+function renderAtt(arr){       //used vanilla javascript for rendering the bootstrap card using 
 
 var render= arr.map(function(data){
 var photos
     var card =`<div class="card mb-3" style="max-width: 540px;">
     <div class="row no-gutters">
       <div class="col-md-4">${data.photos.map(function(photos){ return `<img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photos.photo_reference}&key=AIzaSyBitP27AVOxIuXMYSh1w8YAxKcpVYk2_Pg" class="card-img" alt="...">`})}
-        
       </div>
       <div class="col-md-8">
         <div class="card-body">
@@ -28,6 +27,38 @@ return card;
 })
 return render;
 }
+
+$("#food").click(function(){
+    event.preventDefault();
+   console.log("test");
+
+   axios.get("https://maps.googleapis.com/maps/api/place/textsearch/json?query=barbeque+in+Houston&key=AIzaSyBitP27AVOxIuXMYSh1w8YAxKcpVYk2_Pg")
+   .then(function(respond){
+       placeData=respond.data.results
+       console.log(placeData);
+       var refernce=placeData.map(function(arr){
+           var photoData=arr.photos
+          
+           
+return photoData;
+       })
+
+console.log(refernce);
+
+
+
+       $("#search-container").html(renderAtt(placeData))
+       
+       return refernce;
+   })
+
+
+})
+
+
+
+
+
 
 
     
@@ -57,5 +88,5 @@ console.log(refernce);
 
 
 })
-})
-    
+
+}) 
