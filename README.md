@@ -5,8 +5,14 @@
 An app that helps users find fun things to do in Houston, TX based on their interests.
 
 
-Technologies:
+<b>Technologies:</b>
+
+JavaScript library:
+
+CSS framework: Bootstrap
+
+Two remote APIs: Google Places
 
 
-Group Members:
+</b>Group Members:</b>
 Sampey Hoffman - Desiree McLenden - Daniel Sullivan - Mohammed Mustafa
