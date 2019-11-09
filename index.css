@@ -1,4 +1,5 @@
 
+
 .display-2 {
     color: #B50717;
     font-family: 'Luckiest Guy', cursive;
@@ -47,5 +48,23 @@ body {
 text-align: center;
 
 
+}
+
+
+#nBuilders{
+
+text-align: center;
+
+}
+
+
+#names{
+
+    text-align: center;
+
+}
+footer {
+
+    background-color: rgba(0, 0, 0, 0.185);
 }
 
