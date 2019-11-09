@@ -1,7 +1,46 @@
 
+.display-2 {
+    color: #B50717;
+    font-family: 'Luckiest Guy', cursive;
+
+}
+
+h3 {
+    font-family: 'Luckiest Guy', cursive;
+
+}
+
+
+body {
+    background-color: rgb(2, 2, 2);
+    background-image: url("skyline.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+
+}
+
+.blue-background {
+    background-color: #0502a1;
+    border-color:  #0502a1;
+    
+}
+
+.col-3-search {
+    padding-left: 25%
+}
+
+.spacing {
+  margin-right: 10px;
+}
+
+
+
+
 body {
     background-color: rgb(148, 148, 148);
 
+}
 
 #names{
 
@@ -9,3 +48,4 @@ text-align: center;
 
 
 }
+
