@@ -10,7 +10,7 @@ var render= arr.map(function(data){
 var photos
     var card =`<div class="card mb-3" style="max-width: 540px;">
     <div class="row no-gutters">
-      <div class="col-md-4">${data.photos.map(function(photos){ return `<img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photos.photo_reference}&key=AIzaSyBitP27AVOxIuXMYSh1w8YAxKcpVYk2_Pg" class="card-img" alt="...">`})}
+      <div class="col-md-4">${data.photos.map(function(photo){ return `<img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photo.photo_reference}&key=AIzaSyBitP27AVOxIuXMYSh1w8YAxKcpVYk2_Pg" class="card-img" alt="...">`})}
       </div>
       <div class="col-md-8">
         <div class="card-body">
@@ -54,10 +54,6 @@ console.log(refernce);
 
 
 })
-
-
-
-
 
 
 
