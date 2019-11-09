@@ -4,33 +4,40 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
 	        crossorigin="anonymous">
 	    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
+	 crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-	        crossorigin="anonymous"></script>
+            crossorigin="anonymous"></script>
+          
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-        <script src="index.js"></script>
+        <script src="/index.js"></script>
         <link rel="stylesheet" href="index.css"/>
     </head>
     <body>
+        <header>
         <div class="container">
             <div class="row">
                 <div class="col-12 header text-center">
                     <h2 class="display-2">H-Town Adventures</h2>
-                    <p>Discover the Best of H-Town!</p>
+                    <p>Discover the Best of H-Town!</p>    
                 </div>
             </div>
+        </header>
+            <main>
             <div class="row">
                 <div class="col-3 search">
                     <form id="search-button">
-                        <div class="input-group input-group-lg">
-                            <button class="btn btn-primary input-group-btn" type="submit">FOOD</button>
-                            <button class="btn btn-primary input-group-btn" type="submit">ATTRACTIONS</button>
+                        <div class="input-group input-group-lg d-flex flex-column ">
+                            <button class="btn btn-primary input-group-btn" id="food"type="submit">FOOD</button>
+                            <button class="btn btn-primary input-group-btn" id="attraction" type="submit">ATTRACTIONS</button>
                             <button class="btn btn-primary input-group-btn" type="submit">SPORTS</button>
+
+                            <button id="concert-btn" class="btn btn-primary input-group-btn" type="submit">CONCERTS</button>
                             <button class="btn btn-primary input-group-btn" type="submit">CONCERTS</button>
                             <button id="brewery-btn" class="btn btn-primary input-group-btn" type="submit">
                                 <img src="brewery-icon-2.jpeg" width="200" height="100"/>
                                 
                             </button>
+
                         </div>
                     </form>
                 </div>
@@ -43,5 +50,127 @@
                 </div>
             </div>
         </div>
+
+    </main>
+
+<footer id="Builders">
+    <div class="container mt-5 pt-5">
+
+
+        <!--Section: Content-->
+        <section class="text-center dark-grey-text">
+      
+          <!-- Section heading -->
+          <h3 class="font-weight-bold mb-4 pb-2">Builders</h3>
+          <!-- Section description -->
+          <p class="text-center w-responsive mx-auto mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam
+            eum porro a pariatur veniam.</p>
+      
+              <!-- Grid row -->
+          <div class="row" id="names">
+      
+            <!--Grid column-->
+            <div class="col-lg-2 col-md-12 mb-lg-0 mb-4">
+              <!--Card-->
+              <div class="card testimonial-card">
+                <!--Background color-->
+                <div class="card-up info-color"></div>
+                <!--Avatar-->
+                <div class="avatar mx-auto white">
+                  <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg" class="rounded-circle img-fluid">
+                </div>
+                <div class="card-body">
+                  <!--Name-->
+                  <h5 class="font-weight-bold mb-2">Mohamemd Mustafa</h5>
+                  <hr>
+                  <!--Quotation-->
+                  <p class="dark-grey-text mt-4"><i class="fas fa-quote-left pr-2"></i>Lorem ipsum dolor sit amet eos
+                    </p>
+                </div>
+              </div>
+              <!--Card-->
+            </div>
+            <!--Grid column-->
+      
+            <!--Grid column-->
+            <div class="col-lg-2 col-md-6 mb-md-0 mb-4">
+              <!--Card-->
+              <div class="card testimonial-card">
+                <!--Background color-->
+                <div class="card-up blue-gradient">
+                </div>
+                <!--Avatar-->
+                <div class="avatar mx-auto white">
+                  <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(20).jpg" class="rounded-circle img-fluid">
+                </div>
+                <div class="card-body">
+                  <!--Name-->
+                  <h4 class="font-weight-bold mb-4">Sampey Hoffman</h4>
+                  <hr>
+                  <!--Quotation-->
+                  <p class="dark-grey-text mt-4"><i class="fas fa-quote-left pr-2"></i>Neque cupiditate assumenda in
+                   </p>
+                </div>
+              </div>
+              <!--Card-->
+            </div>
+            <!--Grid column-->
+      
+            <!--Grid column-->
+            <div class="col-lg-2 col-md-6">
+              <!--Card-->
+              <div class="card testimonial-card">
+                <!--Background color-->
+                <div class="card-up indigo"></div>
+                <!--Avatar-->
+                <div class="avatar mx-auto white">
+                  <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(10).jpg" class="rounded-circle img-fluid">
+                </div>
+                <div class="card-body">
+                  <!--Name-->
+                  <h4 class="font-weight-bold mb-4">Desireé M.</h4>
+                  <hr>
+                  <!--Quotation-->
+                  <p class="dark-grey-text mt-4"><i class="fas fa-quote-left pr-2"></i>Delectus impedit saepe officiis
+                </p>
+                </div>
+                
+              </div>
+              
+              <!--Card-->
+            </div>
+            <!--Grid column-->
+            <div class="col-lg-2 col-md-6">
+                <!--Card-->
+                <div class="card testimonial-card">
+                  <!--Background color-->
+                  <div class="card-up indigo"></div>
+                  <!--Avatar-->
+                  <div class="avatar mx-auto white">
+                    <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(10).jpg" class="rounded-circle img-fluid">
+                  </div>
+                  <div class="card-body">
+                    <!--Name-->
+                    <h4 class="font-weight-bold mb-4">Maria Kate</h4>
+                    <hr>
+                    <!--Quotation-->
+                    <p class="dark-grey-text mt-4"><i class="fas fa-quote-left pr-2"></i>Delectus impedit saepe officiis
+                      </p>
+                  </div>
+          </div>
+          <!-- Grid row -->
+      
+        </section>
+        <!--Section: Content-->
+      
+      
+      </div>
+
+
+</footer>
+
+
     </body>
+
 </html>
