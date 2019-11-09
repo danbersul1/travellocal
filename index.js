@@ -1,3 +1,4 @@
+var apiKey = "AIzaSyBitP27AVOxIuXMYSh1w8YAxKcpVYk2_Pg";
 $(document).ready(function(){
 
 
@@ -9,7 +10,7 @@ $(document).ready(function(){
   var photos
       var card =`<div class="card mb-3" style="max-width: 540px;">
       <div class="row no-gutters">
-        <div class="col-md-4">${data.photos.map(function(photos){ return `<img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photos.photo_reference}&key=AIzaSyBitP27AVOxIuXMYSh1w8YAxKcpVYk2_Pg" class="card-img" alt="...">`})}
+        <div class="col-md-4">${data.photos.map(function(photos){ return `<img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photos.photo_reference}&key=${apiKey}" class="card-img" alt="...">`})}
         </div>
         <div class="col-md-8">
           <div class="card-body">
@@ -152,7 +153,7 @@ $(document).ready(function () {
             if (typeof data.photos != 'undefined') {
                 photos = data.photos.map(function (photo) {
                     console.log(photo)
-                    return `<img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photo.photo_reference}&key=AIzaSyBitP27AVOxIuXMYSh1w8YAxKcpVYk2_Pg" class="card-img" alt="..."/>`
+                    return `<img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photo.photo_reference}&key=${apiKey}" class="card-img" alt="..."/>`
                 });
             }
 
@@ -178,7 +179,7 @@ $(document).ready(function () {
         return render;
     }
 
-
+    
 
     $("#brewery-btn").click(function () {
         event.preventDefault();
@@ -209,6 +210,8 @@ $(document).ready(function () {
 })
 
 
+<<<<<<< HEAD
+=======
 
 $(document).ready(function(){
 
@@ -297,3 +300,4 @@ console.log(refernce);
 
 }) 
 
+>>>>>>> master
