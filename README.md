@@ -14,5 +14,5 @@ CSS framework: Bootstrap
 Two remote APIs: Google Places
 
 
-</b>Group Members:</b>
+<b>Group Members:</b>
 Sampey Hoffman - Desiree McLenden - Daniel Sullivan - Mohammed Mustafa
