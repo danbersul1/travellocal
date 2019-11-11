@@ -1,18 +1,23 @@
 # travellocal
 
-<h1>H-TOWN ADVENTURES</h1>
+# H-TOWN ADVENTURES
 
 An app that helps users find fun things to do in Houston, TX based on their interests.
 
 
-<b>Technologies:</b>
+**Technologies:
 
-JavaScript library: Axios
+* JavaScript library: 
+    1. Axios
 
-CSS framework: Bootstrap
+* CSS framework: 
+    1. Bootstrap
 
-Two remote APIs: Google Places
+* Two remote APIs: 
+    1. Google Places
+    2.
 
 
-<b>Group Members:</b>
+**Group Members:
+
 Sampey Hoffman - Desiree McLenden - Daniel Sullivan - Mohammed Mustafa
