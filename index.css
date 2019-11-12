@@ -17,6 +17,8 @@ body {
     background-image: url("skyline.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-size: cover;
+
     
 
 }
@@ -65,8 +67,16 @@ text-align: center;
 }
 footer {
 
-    background-color: rgba(0, 0, 0, 0.185);
+
     padding-bottom: 20px;
     
 }
+#buildtext{
+color: #b8b8c5;
 
+}
+#results{
+display: flex;
+justify-content:center;
+
+}

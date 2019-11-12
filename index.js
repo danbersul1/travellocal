@@ -11,7 +11,7 @@ $(document).ready(function(){
                 if (typeof data.photos != 'undefined') {
                      photos = data.photos.map(function (photo) {
                          console.log(photo)
-                       return `<img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photo.photo_reference}&key=AIzaSyBitP27AVOxIuXMYSh1w8YAxKcpVYk2_Pg" class="card-img" alt="..."/>`
+                       return `<img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photo.photo_reference}&key=AIzaSyBVXSDOOsztsFC2SSLf7kcxvLtVDgDwN3o" class="card-img" alt="..."/>`
                  });
               }
       var card =`<div class="card mb-3"data-toggle="collapse" style="max-width: 540px;">
@@ -23,11 +23,13 @@ $(document).ready(function(){
             <h5 class="card-title">${data.name}</h5>
             <p class="card-text">${data.formatted_address}</p>
             <p class="card-text">Rating ${data.rating}</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
           </div>
-        </div>
+        </div><iframe width="600" height="450" frameborder="0" style="border:0"
+        src="https://www.google.com/maps/embed/v1/place?q=place_id:${data.place_id}&key=AIzaSyBJDqK23uOVafUHXPDZzEpQ7i4XiRWvwW8" allowfullscreen></iframe>
+
       </div>
-    </div>`
+      
+    `
   
   return card;  
   })
@@ -38,7 +40,8 @@ $(document).ready(function(){
     event.preventDefault();
     console.log("test");
   
-    axios.get("https://maps.googleapis.com/maps/api/place/textsearch/json?query=concert+in+Houston&key=AIzaSyBitP27AVOxIuXMYSh1w8YAxKcpVYk2_Pg")
+    axios.get("https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/textsearch/json?query=concert+in+Houston&key=AIzaSyBVXSDOOsztsFC2SSLf7kcxvLtVDgDwN3o")
+    
         .then(function (respond) {
             placeData = respond.data.results
             console.log(placeData);
@@ -62,8 +65,8 @@ $(document).ready(function(){
   $("#brewery-btn").click(function () {
     event.preventDefault();
     console.log("test");
-  
-    axios.get("https://maps.googleapis.com/maps/api/place/textsearch/json?query=breweries+in+Houston&key=AIzaSyBitP27AVOxIuXMYSh1w8YAxKcpVYk2_Pg")
+   
+    axios.get("https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/textsearch/json?query=breweries+in+Houston&key=AIzaSyBVXSDOOsztsFC2SSLf7kcxvLtVDgDwN3o")
         .then(function (respond) {
             placeData = respond.data.results
             console.log(placeData);
@@ -89,13 +92,13 @@ $(document).ready(function(){
   $("#food").click(function(){
       event.preventDefault();
      console.log("test");
-  
-     axios.get("https://maps.googleapis.com/maps/api/place/textsearch/json?query=barbeque+in+Houston&key=AIzaSyBitP27AVOxIuXMYSh1w8YAxKcpVYk2_Pg")
+   
+     axios.get("https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/textsearch/json?query=barbeque+texmes+in+Houston&key=AIzaSyBVXSDOOsztsFC2SSLf7kcxvLtVDgDwN3o")
      .then(function(respond){
          placeData=respond.data.results
          console.log(placeData);
          var refernce=placeData.map(function(arr){
-             var photoData=arr.photos
+             var photoData=arr.s
             
              
   return photoData;
@@ -113,8 +116,8 @@ $(document).ready(function(){
   $("#attraction").click(function(){
        event.preventDefault();
       console.log("test");
-  
-      axios.get("https://maps.googleapis.com/maps/api/place/textsearch/json?query=attractions+in+Houston&key=AIzaSyBitP27AVOxIuXMYSh1w8YAxKcpVYk2_Pg")
+      
+      axios.get("https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/textsearch/json?query=attractions+in+Houston&key=AIzaSyBVXSDOOsztsFC2SSLf7kcxvLtVDgDwN3o")
       .then(function(respond){
           placeData=respond.data.results
           console.log(placeData);
@@ -133,6 +136,55 @@ $(document).ready(function(){
   
   
   })
+  $("#sport-btn").click(function(){
+    event.preventDefault();
+   console.log("test");
+   
+   axios.get("https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/textsearch/json?query=sporting+events+in+Houston&key=AIzaSyBVXSDOOsztsFC2SSLf7kcxvLtVDgDwN3o")
+   .then(function(respond){
+       placeData=respond.data.results
+       console.log(placeData);
+       var refernce=placeData.map(function(arr){
+           var photoData=arr.photos
+          
+           
+return photoData;
+       })
+
+
+       $("#search-container").html(renderAtt(placeData))
+       
+       return refernce;
+   })
+
+
+})
+
+$("#shopping-btn").click(function(){
+  event.preventDefault();
+ console.log("test");
+ 
+ axios.get("https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/textsearch/json?query=malls+in+Houston&key=AIzaSyBVXSDOOsztsFC2SSLf7kcxvLtVDgDwN3o")
+ .then(function(respond){
+     placeData=respond.data.results
+     console.log(placeData);
+     var refernce=placeData.map(function(arr){
+         var photoData=arr.photos
+        
+         
+return photoData;
+     })
+
+
+     $("#search-container").html(renderAtt(placeData))
+     
+     return refernce;
+ })
+
+
+})
+
+  
   
   }) 
   
