@@ -32,9 +32,7 @@ body {
     
 }
 
-.col-3-search {
-    padding-left: 10%;
-}
+
 
 .spacing {
   margin-right: 10px;
@@ -47,10 +45,15 @@ body {
     background-color: rgb(148, 148, 148);
 
 }
-
+/* 
 .col-3-search{
-    display: block;
-    background-color: 
+    
+    background-color: #b8b8c5;
+    
+} */
+#search-button{
+    padding-left: 7%;
+
 }
 
 
@@ -80,4 +83,7 @@ color: #b8b8c5;
 display: flex;
 justify-content:center;
 
+}
+#render{
+    overflow: auto;
 }
