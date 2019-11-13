@@ -33,7 +33,8 @@ body {
 }
 
 .col-3-search {
-    padding-left: 10%;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 .spacing {
@@ -50,7 +51,7 @@ body {
 
 .col-3-search{
     display: block;
-    background-color: 
+     
 }
 
 
