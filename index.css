@@ -1,5 +1,8 @@
 
+@media (min-width: 576px) { 
 
+
+}
 .display-2 {
     color: #B50717;
     font-family: 'Luckiest Guy', cursive;
@@ -30,7 +33,7 @@ body {
 }
 
 .col-3-search {
-    padding-left: 25%
+    padding-left: 10%;
 }
 
 .spacing {
@@ -45,11 +48,9 @@ body {
 
 }
 
-#names{
-
-text-align: center;
-
-
+.col-3-search{
+    display: block;
+    background-color: 
 }
 
 
