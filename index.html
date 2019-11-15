@@ -5,20 +5,56 @@
         <title>H-Town Adventures</title>
         <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-	        crossorigin="anonymous">
+            crossorigin="anonymous">
+            
 	    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
 	 crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
             crossorigin="anonymous"></script>
-            <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+            <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+        <script src="/index.js"></script>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-analytics.js"></script>
+
+
         <script src="index.js"></script>
 
+
         <link rel="stylesheet" href="index.css"/>
+        
     </head>
     <body>
-            <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-           
+           <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyDNnIcd-ASh9Zfg6CPtIoas8E0esMYc2Ws",
+          authDomain: "houston-adventures.firebaseapp.com",
+          databaseURL: "https://houston-adventures.firebaseio.com",
+          projectId: "houston-adventures",
+          storageBucket: "houston-adventures.appspot.com",
+          messagingSenderId: "273467003065",
+          appId: "1:273467003065:web:816067a382d347fbad8b68",
+          measurementId: "G-MRVD3EJY45"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+      </script>
+           <!-- the background video -->
+           <div id="container">
+                <video id="background_video" autoplay loop muted>
+                    <source src="24218908_houston-skyline-time-lapse-traffic-texas-city-scape-traffic_by_stockfootageca_preview.mp4" type="video/mp4">
+                    <source src="24218908_houston-skyline-time-lapse-traffic-texas-city-scape-traffic_by_stockfootageca_preview.mp4" type="video/webm; codecs=vp8, vorbis">    
+                </video>
+               </div>
+
+
         <header>
         <div class="container">
             <div class="row">
@@ -33,10 +69,22 @@
         </header>
 
             <main>
-            <div class="row">
+              
+                
+            <div class="row ">
 
                 <div class="col-3-search" id="search-button">
                     <form > 
+
+                        <!-- button -->
+                        <div class="input-toolbar input-toolbar-lg">
+                             <div class="mt-md-4">
+                            <button id="food" class="btn btn-secondary white-background input-group-btn btn-lg spacing shadow-lg p-3 mb-5 bg-white rounded" title="food"type="submit"><img src="photos/EatMore.jpg" width="200" height="100"/> </button></button>
+                            <button id="sport-btn" class="btn btn-secondary white-background input-group-btn btn-lg spacing shadow-lg p-3 mb-5 bg-white rounded" title="sport" type="submit"><img src="photos/htown-sports.png "width="200" height="100"/></button>
+                            <button id="concert-btn" class="btn btn-secondary white-background input-group-btn btn-lg spacing shadow-lg p-3 mb-5 bg-white rounded" title="concert" type="click"><img src="photos/big-concert-audience-listening-to-music-at-festival-picture-id485343244.jpg "width="200" height="100"/></button>
+                            <button id="shopping-btn" class="btn btn-secondary white-background input-group-btn btn-lg spacing shadow-lg p-3 mb-5 bg-white rounded" title="shopping" type="submit"><img src="photos/Secret-Shopping-Tricks.jpg "width="200" height="100"/></button>
+                            <button id="attraction-btn" class="btn btn-secondary white-background input-group-btn btn-lg spacing shadow-lg p-3 mb-5 bg-white rounded" title="attraction" type="submit"><img src="photos/houston-header-image.jpg"width="200" height="100"/></button>
+
                         
                         <div class="input-toolbar input-toolbar-lg d-flex flex-row text-ce">
                             
@@ -49,22 +97,49 @@
                             <button id="brewery-btn" class="btn btn-primary blue-background input-group-btn" type="submit">
                                     <img src="photos/htown-craft-beer.jpeg" width="200" height="100"/> </button>
 
-                        </div>
+
+                      
                         
                     </form>
+                    
                 </div>
             </div>
-            <div class="row" id="results">
-                    <div class="overflow-auto">
-                <div class="col-12 results ">
-                    <div id="search-container">
+            <div class="row " id="results">
+                    
+                <div class="col-12 results" id="search">
+                    <div id="search-container"class="d-flex flex-wrap"  >
+                            <div class="text-center">
                             
                         </div>
 
-                    </div>
+                    
                 </div>
             </div>
         </div>
+        </div>
+
+      
+<!-- photos slide -->
+        <div class="container">
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img class="d-block w-100" src="photos/IMG_0360.JPG"  height="600" alt="First slide">
+                          </div>
+                          <div class="carousel-item">
+                            <img class="d-block w-100" src="photos/IMG_2845.JPG" height="600" alt="Second slide">
+                          </div>
+                          <div class="carousel-item">
+                            <img class="d-block w-100 " src="photos/IMG_2789.JPG" height="600" alt="Third slide">
+                          </div>
+                          <div class="carousel-item">
+                                <img class="d-block w-100 " src="photos/IMG_3698.JPG" height="600" alt="forth slide">
+                              </div>
+                              <div class="carousel-item">
+                                    <img class="d-block w-100 " src="photos/IMG_2855.jpg" height="600" alt="fifth slide">
+                                  </div>
+                        </div>
+                      </div>
         </div>
 
     </main>
@@ -86,21 +161,21 @@
           <div class="row" id="names">
       
             <!--Grid column-->
-            <div class="col-lg-3 col-md-12 mb-lg-0 mb-4" id="names">
+            <div class="col-lg-3 col-md-6 mb-lg-0 mb-4" >
               <!--Card-->
               <div class="card testimonial-card">
                 <!--Background color-->
                 <div class="card-up info-color"></div>
                 <!--Avatar-->
                 <div class="avatar mx-auto white">
-                  <img src="https://ca.slack-edge.com/T0569RDC6-ULW7YQNJF-3ad66b5e0ec9-512" class="rounded-circle img-fluid">
+                  <img src="https://ca.slack-edge.com/T0569RDC6-ULW7YQNJF-3ad66b5e0ec9-512" width="213"  class="rounded-circle img-fluid">
                 </div>
                 <div class="card-body">
                   <!--Name-->
                   <h5 class="font-weight-bold mb-2">Mohammed Mustafa</h5>
                   <hr>
                   <!--Quotation-->
-                  
+                  <a href="https://github.com/mmustafa86"><img src="photos/github-transparent.png" width="50" height="50"/></a>
                 </div>
               </div>
               <!--Card-->
@@ -116,7 +191,7 @@
                 </div>
                 <!--Avatar-->
                 <div class="avatar mx-auto white">
-                  <img src="https://ca.slack-edge.com/T0569RDC6-UM9GSBK1D-19e3afff8d60-512" class="rounded-circle img-fluid">
+                  <img src="https://ca.slack-edge.com/T0569RDC6-UM9GSBK1D-19e3afff8d60-512" width="200" class="rounded-circle img-fluid">
                 </div>
                 <div class="card-body">
                   <!--Name-->
@@ -125,7 +200,6 @@
                   <!--Quotation-->
                   <a href="https://github.com/Samplehoff"><img src="photos/github-transparent.png" width="50" height="50"/></a>
 
-                
                 </div>
               </div>
               <!--Card-->
@@ -140,35 +214,35 @@
                 <div class="card-up indigo"></div>
                 <!--Avatar-->
                 <div class="avatar mx-auto white">
-                  <img src="https://ca.slack-edge.com/T0569RDC6-UM9GSB83H-dbcc7f00029d-512" class="rounded-circle img-fluid">
+                  <img src="https://ca.slack-edge.com/T0569RDC6-UM9GSB83H-dbcc7f00029d-512"  width="200"class="rounded-circle img-fluid">
                 </div>
                 <div class="card-body">
                   <!--Name-->
                   <h4 class="font-weight-bold mb-4">Desireé M.</h4>
                   <hr>
                   <!--Quotation-->
-                 
+                  <a href="https://github.com/Samplehoff"><img src="photos/github-transparent.png" width="50" height="50"/></a>
                 </div>
                 
               </div>
               
               <!--Card-->
             </div>
-            <!--Grid column-->
+           
             <div class="col-lg-3 col-md-6">
-                <!--Card-->
+                
                 <div class="card testimonial-card">
-                  <!--Background color-->
+                  
                   <div class="card-up indigo"></div>
-                  <!--Avatar-->
+                  
                   <div class="avatar mx-auto white">
-                    <img src="https://ca.slack-edge.com/T0569RDC6-UMN3JDNUA-36090df84b1a-512" class="rounded-circle img-fluid">
+                    <img src="https://ca.slack-edge.com/T0569RDC6-UMN3JDNUA-36090df84b1a-512" width="200" class="rounded-circle img-fluid">
                   </div>
                   <div class="card-body">
-                    <!--Name-->
+                    
                     <h4 class="font-weight-bold mb-4">Daniel Sullivan</h4>
                     <hr>
-                    <!--Quotation-->
+                    <a href="https://github.com/Samplehoff"><img src="photos/github-transparent.png" width="50" height="50"/></a>
                     
                   </div>
           </div>
@@ -179,8 +253,9 @@
       
       
       </div>
-<hr>
       
+<hr>
+
 </footer>
 
 
