@@ -10,7 +10,7 @@
 	 crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
             crossorigin="anonymous"></script>
-            <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+            <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <script src="/index.js"></script>
         <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -22,24 +22,25 @@
 
 
         <link rel="stylesheet" href="index.css"/>
+        
     </head>
     <body>
-            <script>
-                    // Your web app's Firebase configuration
-                    var firebaseConfig = {
-                      apiKey: "AIzaSyDNnIcd-ASh9Zfg6CPtIoas8E0esMYc2Ws",
-                      authDomain: "houston-adventures.firebaseapp.com",
-                      databaseURL: "https://houston-adventures.firebaseio.com",
-                      projectId: "houston-adventures",
-                      storageBucket: "houston-adventures.appspot.com",
-                      messagingSenderId: "273467003065",
-                      appId: "1:273467003065:web:816067a382d347fbad8b68",
-                      measurementId: "G-MRVD3EJY45"
-                    };
-                    // Initialize Firebase
-                    firebase.initializeApp(firebaseConfig);
-                    firebase.analytics();
-                  </script>
+           <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyDNnIcd-ASh9Zfg6CPtIoas8E0esMYc2Ws",
+          authDomain: "houston-adventures.firebaseapp.com",
+          databaseURL: "https://houston-adventures.firebaseio.com",
+          projectId: "houston-adventures",
+          storageBucket: "houston-adventures.appspot.com",
+          messagingSenderId: "273467003065",
+          appId: "1:273467003065:web:816067a382d347fbad8b68",
+          measurementId: "G-MRVD3EJY45"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+      </script>
            
         <header>
         <div class="container">
@@ -66,30 +67,30 @@
                              <div class="mt-md-4">
                             <button id="food" class="btn btn-secondary white-background input-group-btn btn-lg spacing shadow-lg p-3 mb-5 bg-white rounded" title="food"type="submit"><img src="photos/EatMore.jpg" width="200" height="100"/> </button></button>
                             <button id="sport-btn" class="btn btn-secondary white-background input-group-btn btn-lg spacing shadow-lg p-3 mb-5 bg-white rounded" title="sport" type="submit"><img src="photos/USSportsBlog.jpg "width="200" height="100"/></button>
-                            <button id="concert-btn" class="btn btn-secondary white-background input-group-btn btn-lg spacing shadow-lg p-3 mb-5 bg-white rounded" title="concert" type="submit"><img src="photos/big-concert-audience-listening-to-music-at-festival-picture-id485343244.jpg "width="200" height="100"/></button>
+                            <button id="concert-btn" class="btn btn-secondary white-background input-group-btn btn-lg spacing shadow-lg p-3 mb-5 bg-white rounded" title="concert" type="click"><img src="photos/big-concert-audience-listening-to-music-at-festival-picture-id485343244.jpg "width="200" height="100"/></button>
                             <button id="shopping-btn" class="btn btn-secondary white-background input-group-btn btn-lg spacing shadow-lg p-3 mb-5 bg-white rounded" title="shopping" type="submit"><img src="photos/Secret-Shopping-Tricks.jpg "width="200" height="100"/></button>
                             <button id="attraction-btn" class="btn btn-secondary white-background input-group-btn btn-lg spacing shadow-lg p-3 mb-5 bg-white rounded" title="attraction" type="submit"><img src="photos/houston-1620802_1920.webp"width="200" height="100"/></button>
-                            <button id="brewery-btn" class="btn btn-secondary white-background input-group-btn btn-lgshadow-lg p-3 mb-5 bg-white rounded" type="submit"><img src="brewery-icon-2.jpeg" width="200" title="brewery" height="100"/></button>
-                                </div>
-                        </div>
+                            <button id="brewery-btn" class="btn btn-secondary white-background input-group-btn btn-lgshadow-lg p-3 mb-5 bg-white rounded"  ><img src="brewery-icon-2.jpeg" width="200" title="brewery" height="100"/></button>
+
+                            
                         
                     </form>
                 </div>
             </div>
-            <div class="row" id="results">
-                    <div class="overflow-auto">
-                <div class="col-12 results ">
-                    <div id="search-container"class="d-flex flex-wrap justify-content-center">
+            <div class="row " id="results">
+                    
+                <div class="col-12 results" id="search">
+                    <div id="search-container"class="d-flex flex-wrap justify-content-center"  >
                             
                         </div>
 
-                    </div>
+                    
                 </div>
             </div>
         </div>
         </div>
 
-
+      
 
         <div class="container">
                 <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
