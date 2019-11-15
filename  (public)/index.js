@@ -19,7 +19,7 @@ var placesKey = "AIzaSyBVXSDOOsztsFC2SSLf7kcxvLtVDgDwN3o"
       var card =`
     
 <div id="render" >
-      <div class="card mb-3"  style="max-width: 540px;">
+      <div class="card text-white bg-dark mb-3"  style="max-width: 540px;">
       <div class="row no-gutters">
         <div class="col-md-4">${photos}
         </div>
