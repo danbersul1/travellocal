@@ -65,7 +65,7 @@ var placesKey = "AIzaSyBVXSDOOsztsFC2SSLf7kcxvLtVDgDwN3o"
             if ($("#search").css("display")!=="flex"){
               $("#search").css("display","flex");
             }else if ($("#search").css("display")!=="none"){
-              $("#search").css("display","none");
+              $("#search").css("display","none")
             }
             
             
