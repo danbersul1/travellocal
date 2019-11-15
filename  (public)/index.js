@@ -17,10 +17,7 @@ var placesKey = "AIzaSyBVXSDOOsztsFC2SSLf7kcxvLtVDgDwN3o"
               var map=`<iframe width="600" height="450" frameborder="0" style="border:0"
               src="https://www.google.com/maps/embed/v1/place?q=place_id:${data.place_id}&key=AIzaSyBJDqK23uOVafUHXPDZzEpQ7i4XiRWvwW8" allowfullscreen></iframe> `
       var card =`
-      <div id="overlay">
-      <img src="loader.gif" alt="Loading" /><br/>
-      Loading...
-  </div>
+    
 <div id="render" >
       <div class="card mb-3"  style="max-width: 540px;">
       <div class="row no-gutters">
@@ -47,7 +44,6 @@ var placesKey = "AIzaSyBVXSDOOsztsFC2SSLf7kcxvLtVDgDwN3o"
   $("#concert-btn").click(function () {
     event.preventDefault();
     console.log("test");
-    
   
     axios.get("https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/textsearch/json?query=concert+in+Houston&key="+placesKey)
     
@@ -94,7 +90,7 @@ var placesKey = "AIzaSyBVXSDOOsztsFC2SSLf7kcxvLtVDgDwN3o"
   
             console.log(refernce);
   
-           
+  
   
             $("#search-container").html(renderAtt(placeData))
 
@@ -105,7 +101,7 @@ console.log($("#search").css("display"))
               $("#search").css("display","none");
             }
             
-            })
+            
             
              
           
