@@ -16,6 +16,7 @@ An app that helps users find fun things to do in Houston, TX based on their inte
 * Two remote APIs: 
     1. Google Places
     2. Google Maps
+    3. Firebase
 
 
 **Group Members:**
