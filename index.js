@@ -11,7 +11,7 @@ var placesKey = "AIzaSyBVXSDOOsztsFC2SSLf7kcxvLtVDgDwN3o"
                 if (typeof data.photos != 'undefined') {
                      photos = data.photos.map(function (photo) {
                          console.log(photo)
-                       return `<img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photo.photo_reference}&key=AIzaSyBVXSDOOsztsFC2SSLf7kcxvLtVDgDwN3o" height="100" class="card-img" alt="..."/>`
+                       return `<img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photo.photo_reference}&key=AIzaSyBVXSDOOsztsFC2SSLf7kcxvLtVDgDwN3o" height="150" class="card-img" alt="..."/>`
                  });
               }
               var map=`<iframe width="600" height="450" frameborder="0" style="border:0"
@@ -40,10 +40,11 @@ var placesKey = "AIzaSyBVXSDOOsztsFC2SSLf7kcxvLtVDgDwN3o"
   })
   return render;
   }
- 
+ // the concert button 
   $("#concert-btn").click(function () {
     event.preventDefault();
     console.log("test");
+
   
     axios.get("https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/textsearch/json?query=concert+in+Houston&key="+placesKey)
     
@@ -62,6 +63,8 @@ var placesKey = "AIzaSyBVXSDOOsztsFC2SSLf7kcxvLtVDgDwN3o"
   
   
             $("#search-container").html(renderAtt(placeData));
+           
+           
             if ($("#search").css("display")!=="flex"){
               $("#search").css("display","flex");
             }else if ($("#search").css("display")!=="none"){
@@ -73,6 +76,7 @@ var placesKey = "AIzaSyBVXSDOOsztsFC2SSLf7kcxvLtVDgDwN3o"
         })
         
       });
+      //the brewery button 
   $("#brewery-btn").click(async function () {
     event.preventDefault();
     console.log("test");
@@ -111,7 +115,7 @@ console.log($("#search").css("display"))
   return beerAPI;
       })
   
-  
+  // the food button 
   $("#food").click(function(){
       event.preventDefault();
      console.log("test");
@@ -140,7 +144,7 @@ console.log($("#search").css("display"))
   
   })
   
-      
+      // the houston attaction 
   $("#attraction-btn").click(function(){
        event.preventDefault();
       console.log("test");
@@ -168,6 +172,7 @@ console.log($("#search").css("display"))
   
   
   })
+  //sport events button 
   $("#sport-btn").click(function(){
     event.preventDefault();
    console.log("test");
@@ -228,7 +233,9 @@ return photoData;
 
 })
 
-
+// $("button").hover(function(){
+//   $(this).toggleClass("btn-secondary");
+// });
 })
   
   
