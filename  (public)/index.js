@@ -11,7 +11,7 @@ var placesKey = "AIzaSyBVXSDOOsztsFC2SSLf7kcxvLtVDgDwN3o"
                 if (typeof data.photos != 'undefined') {
                      photos = data.photos.map(function (photo) {
                          console.log(photo)
-                       return `<img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photo.photo_reference}&key=AIzaSyBVXSDOOsztsFC2SSLf7kcxvLtVDgDwN3o" height="100" class="card-img" alt="..."/>`
+                       return `<img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photo.photo_reference}&key=AIzaSyBVXSDOOsztsFC2SSLf7kcxvLtVDgDwN3o" height="150" class="card-img" alt="..."/>`
                  });
               }
               var map=`<iframe width="600" height="450" frameborder="0" style="border:0"
