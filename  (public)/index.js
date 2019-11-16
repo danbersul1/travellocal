@@ -227,7 +227,9 @@ return photoData;
 
 
 })
-
+$("button").hover(function(){
+  $(this).css("backround")
+})
 
 })
   

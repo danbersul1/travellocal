@@ -11,7 +11,7 @@
 
 h3 {
     font-family: 'Luckiest Guy', cursive;
-    color: rgb(200, 200, 201);
+    color:  black
 
 }
 
@@ -119,6 +119,12 @@ justify-content:center;
     height: 100%; width: 100%;
   }
 
+  .btn-secondary {
+    color: #fff;
+    background-color: #0495c9;
+    border-color: #357ebd; /*set the color you want here*/
+
+  }
   /* #video_cover {
     position: absolute;
 
