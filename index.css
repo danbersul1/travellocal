@@ -11,7 +11,7 @@
 
 h3 {
     font-family: 'Luckiest Guy', cursive;
-    color: rgb(200, 200, 201);
+    color:  black
 
 }
 
@@ -34,11 +34,6 @@ body {
 }
 
 
-.col-3-search {
-    padding-left: 100px;
-    padding-right: 100px;
-}
-
 
 .spacing {
   margin-right: 10px;
@@ -53,16 +48,12 @@ body {
 }
 /* 
 .col-3-search{
-
     
     background-color: #b8b8c5;
     
 } */
 #search-button{
     padding-left: 10%;
-
-    display: block;
-     
 
 }
 
@@ -129,6 +120,12 @@ justify-content:center;
     height: 100%; width: 100%;
   }
 
+  .btn-secondary {
+    color: #fff;
+    background-color: #0495c9;
+    border-color: #357ebd; /*set the color you want here*/
+
+  }
   /* #video_cover {
     position: absolute;
 
